@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* difference btw vw, px, %, em, rem:
+
+vw: viewport width
+px: pixels
+%: percentage
+em: font size of the element
+rem: font size of the root element
+*/
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.game-container {
+    width: min(95vw, 500px);
+}
+
+
+#game-board {
+    width: 100%;
+    aspect-ratio: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+
+    border: 3px solid #222;
+}
+
+.cell {
+    border: 1px solid #ddd;
+}
+
+.snake {
+    background: green;
+}
+
+.head {
+    background: darkgreen;
+}
